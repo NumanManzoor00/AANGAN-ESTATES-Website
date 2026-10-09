@@ -1,0 +1,10 @@
+export const properties = [
+ {id:1,title:'The Courtyard House',city:'Lahore',area:'DHA Phase 6',beds:5,baths:6,size:'1 kanal',price:85000000,image:'hero.jpg',type:'House',tag:'Featured',description:'A spacious contemporary home with an open courtyard, generous living areas, and room for the whole family.'},
+ {id:2,title:'Garden View Residence',city:'Islamabad',area:'Bahria Enclave',beds:4,baths:4,size:'10 marla',price:42500000,image:'home-1.jpg',type:'House',tag:'New listing',description:'Light-filled spaces and a peaceful setting make this residence an inviting place to settle down.'},
+ {id:3,title:'The Palm Villa',city:'Karachi',area:'DHA Phase 8',beds:5,baths:5,size:'500 sq yd',price:95000000,image:'home-2.jpg',type:'Villa',tag:'Premium',description:'A refined villa with spacious entertaining areas, a private garden, and contemporary finishes.'},
+ {id:4,title:'Maple Family Home',city:'Lahore',area:'Bahria Town',beds:3,baths:3,size:'5 marla',price:22500000,image:'home-3.jpg',type:'House',tag:'Family favorite',description:'A welcoming family home with a practical layout and comfortable shared spaces.'},
+ {id:5,title:'Parkside Apartment',city:'Islamabad',area:'F-11 Markaz',beds:2,baths:2,size:'1,450 sq ft',price:28000000,image:'home-4.jpg',type:'Apartment',tag:'City living',description:'A modern apartment with bright interiors, an open living area, and a convenient urban location.'},
+ {id:6,title:'The Olive Residence',city:'Bahawalpur',area:'DHA Bahawalpur',beds:4,baths:4,size:'10 marla',price:32000000,image:'home-5.jpg',type:'House',tag:'New listing',description:'Thoughtfully arranged spaces and a warm interior palette create an easygoing family retreat.'}
+];
+export const rentals=properties.map((p,i)=>({...p,id:p.id+10,price:[180000,95000,250000,65000,85000,75000][i],title:['The Courtyard Retreat','Garden View Rental','The Palm Villa Rental','Maple Family Rental','Parkside Apartment','The Olive Rental'][i],tag:i%2?'Available now':'Featured rental'}));
+export function priceLabel(price,rent=false){return rent ? `PKR ${price.toLocaleString('en-PK')}` : `PKR ${(price/10000000).toFixed(2).replace(/0$/,'')} crore`;}

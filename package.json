@@ -1,0 +1,22 @@
+{
+  "name": "aangan-estates",
+  "version": "1.0.0",
+  "description": "Two-page React real estate website",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "python3 -m http.server 3000 --directory dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "private": true
+}
